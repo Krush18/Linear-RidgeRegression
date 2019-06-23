@@ -53,7 +53,7 @@ print(ylog_train.shape)
 print(X_test.shape)
 print(ylog_test.shape)
 #Next step is to train the model
-rdge = linear_model.Ridge()
+rdge = linear_model.Ridge(alpha=0.5)
 rdge.fit(X_train,ylog_train)
 print("Intercept = ",rdge.intercept_)
 print(pd.DataFrame(rdge.coef_,X.columns,columns = ['Coefficient']))
